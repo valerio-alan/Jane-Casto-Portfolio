@@ -9,13 +9,13 @@ export default function Header(props) {
         
             let pos_header = window.pageYOffset + header.offsetHeight
             
-            const sectionDistances = [...props.sections].map(section => (section.offsetTop + section.offsetHeight/1.5) - pos_header)
+            const sectionDistances = [...props.sections].map(section => (section.element.offsetTop + section.element.offsetHeight/1.5) - pos_header)
             
             let min = Math.min(...sectionDistances.filter(num => num > 0))
 
             props.sections.forEach((section, i) => {
                 if (min === sectionDistances[i]) {
-                    setCurrentSection(section.id)
+                    setCurrentSection(section.element.id)
                 }
             })
         }
@@ -25,11 +25,11 @@ export default function Header(props) {
         }
     }, [props.sections])
 
-    const linkEls = props.links.map((link, i) => {
+    const linkEls = [...props.sections].map((section, i) => {
         return (
-            <a className='header-link' href={link.title === 'Home' ? '#' : link.href} key={i}>
-                <h2 className={currentSection === link.title ? 'unselectable current-link' : 'unselectable'}>{link.title}</h2>
-            </a>
+            <div className='header-link pointer' onClick={section.offsetFunc} key={i}>
+                <h2 className={currentSection === section.title ? 'unselectable current-link' : 'unselectable'}>{section.title}</h2>
+            </div>
         )
     })
 

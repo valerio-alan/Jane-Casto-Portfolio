@@ -39,6 +39,10 @@ body {
   margin: auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /* Header Styling */
 
 header {
@@ -98,12 +102,6 @@ header a {
   background-color: var(--accent-color);
   color: white;
   border-radius: 2px;
-}
-
-@media screen and (max-width: 500px) {
-  .header-right {
-    position: static;
-  }
 }
 
 /* Home Styling */
