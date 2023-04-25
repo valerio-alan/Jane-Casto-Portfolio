@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import ParticleBack from './Particles'
 
 export default function Header(props) {
