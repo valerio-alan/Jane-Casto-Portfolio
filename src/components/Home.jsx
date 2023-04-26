@@ -2,7 +2,7 @@ import ParticleBack from './Particles'
 
 export default function Home(props) {
     return (
-        <div className='section' id='Home'>
+        <div className='section unselectable' id='Home'>
             <ParticleBack />
             <div className='home-info popped pointer' onClick={props.sections[1] && props.sections[1].offsetFunc}>
                 <h1 className='text-logo unselectable'>Jane Casto</h1>
