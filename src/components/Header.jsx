@@ -34,20 +34,32 @@ export default function Header(props) {
     })
 
     return (
-        <header className='popped'>
-            <a className='header-left' href='/' style={{
-                opacity: currentSection === 'Home' ? '0' : '1',
-                pointerEvents: currentSection === 'Home' ? 'none' : 'auto'
-            }}>
-                <h1 className='unselectable text-logo'>Jane Casto</h1>
-            </a>
-
-            <div className='header-right' style={{
-                right: currentSection === 'Home' ? '50%' : '0',
-                transform: currentSection === 'Home' ? 'translateX(calc(50% + 20px))' : 'translateX(0)'
-            }}>
+        <div className='header-wrapper'>
+            <header className='popped'>
+                <a className='header-left' href='/' style={{
+                    opacity: currentSection === 'Home' ? '0' : '1',
+                    pointerEvents: currentSection === 'Home' ? 'none' : 'auto'
+                }}>
+                    <h1 className='unselectable text-logo'>Jane Casto</h1>
+                </a>
+                <div className='header-right' style={{
+                    right: currentSection === 'Home' ? '50%' : '0',
+                    transform: currentSection === 'Home' ? 'translateX(calc(50% + 20px))' : 'translateX(0)'
+                }}>
+                    {linkEls}
+                </div>
+                <div className='header-mobile-icon mobile pointer' onClick={props.toggleNav} style={{
+                    right: currentSection === 'Home' ? '50%' : '0',
+                    transform: currentSection === 'Home' ? 'translateX(50%)' : 'translateX(0)'
+                }}>
+                    <div className='header-icon-line' style={{transform: props.navOpen ? 'translateY(11.5px) rotate(45deg)' : ''}}></div>
+                    <div className='header-icon-line' style={{width: props.navOpen ? '0' : ''}}></div>
+                    <div className='header-icon-line' style={{transform: props.navOpen ? 'translateY(-11.5px) rotate(-45deg)' : ''}}></div>
+                </div>
+            </header>
+            <div className='header-mobile-nav mobile' style={{transform: props.navOpen ? 'translateY(0)' : 'translateY(-100%)'}}>
                 {linkEls}
             </div>
-        </header>
+        </div>
     )
 }
