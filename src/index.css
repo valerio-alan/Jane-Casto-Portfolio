@@ -110,7 +110,7 @@ header a {
 
 .header-link {
   color: var(--accent-color-light);
-  transition: color 0.2s ease;
+  transition: color 0.4s ease;
 }
 
 .header-link:hover, .header-link:focus, .header-link:active {
@@ -176,7 +176,7 @@ header a {
   .header-link {
     width: 100%;
     color: var(--accent-color-light);
-    transition: color 0.2s ease;
+    transition: color 0.4s ease;
   }
   
   .header-link:hover, .header-link:focus, .header-link:active {
@@ -223,7 +223,7 @@ header a {
   border-radius: 5px;
   width: 520px;
   height: 220px;
-  transition: bottom 0.2s ease;
+  transition: bottom 0.4s ease;
 }
 
 .home-info:hover, .home-info:focus, .home-info:active {
@@ -247,7 +247,7 @@ header a {
   transform: translateX(-50%);
   border: 40px solid;
   border-color: var(--accent-color) transparent transparent transparent;
-  transition: bottom 0.2s ease;
+  transition: bottom 0.4s ease;
 }
 
 .arrow-down:hover, .arrow-down:focus, .arrow-down:active {
@@ -280,7 +280,7 @@ header a {
     border-radius: 5px;
     max-width: 300px;
     max-height: 125px;
-    transition: bottom 0.2s ease;
+    transition: bottom 0.4s ease;
   }
   
   .home-info:hover, .home-info:focus, .home-info:active {
@@ -337,7 +337,7 @@ header a {
   display: flex;
   text-decoration: none;
   width: fit-content;
-  transition: bottom 0.2s ease;
+  transition: bottom 0.4s ease;
 }
 
 .intro-button:hover, .intro-button:focus, .intro-button:active {
@@ -457,7 +457,7 @@ header a {
   bottom: 0;
   min-height: calc(var(--section-max-width) / 4);
   text-decoration: none;
-  transition: bottom 0.2s ease;
+  transition: bottom 0.4s ease;
   text-align: center;
 }
 

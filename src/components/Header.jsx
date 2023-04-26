@@ -48,7 +48,7 @@ export default function Header(props) {
                 }}>
                     {linkEls}
                 </div>
-                <div className='header-mobile-icon mobile pointer' onClick={props.toggleNav} style={{
+                <div className='header-mobile-icon mobile pointer' onClick={!props.navOpen ? props.toggleNav : () => {}} style={{
                     right: currentSection === 'Home' ? '50%' : '0',
                     transform: currentSection === 'Home' ? 'translateX(50%)' : 'translateX(0)'
                 }}>
