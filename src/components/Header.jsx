@@ -57,7 +57,10 @@ export default function Header(props) {
                     <div className='header-icon-line' style={{transform: props.navOpen ? 'translateY(-11.5px) rotate(-45deg)' : ''}}></div>
                 </div>
             </header>
-            <div className='header-mobile-nav mobile' style={{transform: props.navOpen ? 'translateY(0)' : 'translateY(-100%)'}}>
+            <div className='header-mobile-nav mobile' style={{
+                transform: props.navOpen ? 'translateY(0)' : 'translateY(-100%)',
+                opacity: props.navOpen ? '0.8' : '0'
+            }}>
                 {linkEls}
             </div>
         </div>
