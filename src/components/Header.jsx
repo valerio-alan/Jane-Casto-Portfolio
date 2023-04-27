@@ -19,6 +19,9 @@ export default function Header(props) {
                 }
             })
         }
+
+        handleScroll()
+
         window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
