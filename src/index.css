@@ -19,14 +19,14 @@ body {
 
 *.unselectable {
   -moz-user-select: -moz-none;
-  -khtml-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
 .popped {
-  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
 }
 
 .section {
@@ -64,6 +64,7 @@ body {
 /* Header Styling */
 
 .header-wrapper {
+  position: -webkit-sticky;
   position: sticky;
   height: var(--header-height);
   width: 100%;
@@ -165,7 +166,7 @@ header a {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
     padding: 10px;
     width: 100%;
@@ -185,6 +186,8 @@ header a {
   
   .header-link h2 {
     margin: 5px 5px 5px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 0 6px;
   }
@@ -336,6 +339,8 @@ header a {
   bottom: 0;
   display: flex;
   text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   transition: bottom 0.4s ease;
 }
@@ -345,6 +350,8 @@ header a {
 }
 
 .intro-button h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--accent-color);
   color: white;
