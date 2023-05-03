@@ -42,9 +42,9 @@ export default function HomePage() {
       <Home sections={sections}/>
       <Intro sections={sections}/>
       <Portfolio windowWidth={windowWidth}/>
-      <div className='section' id='Resume' style={{height:'1000px', backgroundColor:'white'}}>
+      {/* <div className='section' id='Resume' style={{height:'1000px', backgroundColor:'white'}}>
         <div style={{height:'100%', width:'1%', backgroundColor:'#EFE7E7', marginInline:'auto'}}></div>
-      </div>
+      </div> */}
       <Contact/>
     </div>
   )
