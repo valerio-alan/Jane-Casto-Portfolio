@@ -22,8 +22,8 @@ export default function Portfolio(props) {
 
     return (
         <div className='section' id='Portfolio'>
-            <div className='portfolio-content section-limiter'>
-                <h2 className='portfolio-title popped'>Portfolio</h2>
+            <div className='section-content section-limiter'>
+                <h2 className='section-title popped'>Portfolio</h2>
                 <div className='portfolio-grid'>
                     {projectEls}
                 </div>
