@@ -1,7 +1,7 @@
 import projects from '../data/projects'
 
 export default function Portfolio(props) {
-    const projectWidth = projects.length >= 4 ? 5 : (projects.length + 1)
+    const projectWidth = 5
 
     const projectEls = projects.map((project, i) => (
         <a className='portfolio-item-wrapper' href={project.link} target="_blank" key={i} style={{
