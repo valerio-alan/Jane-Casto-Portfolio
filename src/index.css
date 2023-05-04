@@ -457,7 +457,7 @@ header a {
   }
   
   .intro-buttons {
-    margin: 35px auto;
+    margin: 35px auto 0;
     flex-direction: column-reverse;
     align-items: center;
     gap: 20px;
