@@ -457,10 +457,14 @@ header a {
   }
   
   .intro-buttons {
-    margin: 0 auto;
+    margin: 35px auto;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
   }
 
   .intro-buttons h3 {
+    margin: 0;
     font-size: 1.5rem;
   }
 }
