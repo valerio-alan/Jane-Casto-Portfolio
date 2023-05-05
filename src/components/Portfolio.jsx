@@ -1,11 +1,12 @@
 import projects from '../data/projects'
 
 export default function Portfolio(props) {
-    const projectWidth = 5
+    // const projectWidth = 5
 
     const projectEls = projects.map((project, i) => (
         <a className='portfolio-item-wrapper' href={project.link} target="_blank" key={i} style={{
-            width: `calc(var(--section-max-width) / ${props.windowWidth >= 1024 ? projectWidth : 4})`
+            // width: `calc(var(--section-max-width) / ${props.windowWidth >= 1024 ? projectWidth : 4})`
+            width: `calc(var(--section-max-width) / 5)`
         }}>
             <h3 className='portfolio-item-title mobile'>{project.title}</h3>
             <div className='portfolio-item popped' style={{
