@@ -10,7 +10,7 @@ export default [
         title:'Modern School Segregation',
         description:'Examining racial disparities within schools of the same zip codes in California.',
         img:'project_images/Racial Skewing Box Plots.jpg',
-        link:'',
+        link:'/projects/Modern Day School Segregation_ Policy Brief.pdf',
         tags:['R', 'Google Sheets','Policy']
     },
     {
