@@ -7,6 +7,13 @@ export default [
         tags:['Tableau', 'Google Sheets']
     },
     {
+        title:'LARC Disparities',
+        description:'Analyzing the relationship between long-acting reversible contraceptives and race.',
+        img:'project_images/LARC_image.png',
+        link:'/projects/Health Policy_ LARC and Race.pdf',
+        tags:['Stata', 'Policy', 'Healthcare']
+    },
+    {
         title:'Modern School Segregation',
         description:'Examining racial disparities within schools of the same zip codes in California.',
         img:'project_images/Racial Skewing Box Plots.png',
