@@ -4,7 +4,7 @@ export default function Portfolio(props) {
     // const projectWidth = 5
 
     const projectEls = projects.map((project, i) => (
-        <a className='portfolio-item-wrapper' href={project.link} target="_blank" key={i} style={{
+        <a className='portfolio-item-wrapper' href={project.link} target="_blank" rel="noopener" key={i} style={{
             // width: `calc(var(--section-max-width) / ${props.windowWidth >= 1024 ? projectWidth : 4})`
             width: `calc(var(--section-max-width) / 5)`
         }}>
