@@ -7,6 +7,13 @@ export default [
         tags:['Tableau', 'Google Sheets']
     },
     {
+        title:'R Visualizations',
+        description:'Examples of some of my ggplot2 visualizations in R.',
+        img:'project_images/Infection Rates Plot.png',
+        link:'/projects/Portfolio-Visualization-Examples.html',
+        tags:['R', 'R Markdown']
+    },
+    {
         title:'LARC Disparities',
         description:'Analyzing the relationship between long-acting reversible contraceptives and race.',
         img:'project_images/LARC_image.png',
