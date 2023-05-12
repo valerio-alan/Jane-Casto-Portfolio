@@ -17,7 +17,7 @@ export default function Intro(props) {
 					</p>
 					<div className='intro-buttons'>
 						<h3 className='pointer unselectable' onClick={props.sections[2] && props.sections[2].offsetFunc}>
-							See my projects
+							Projects
 						</h3>
 						<a className='unselectable' href='/Resume.pdf' target='_blank'>
 							<h3 className='unselectable'>Resume</h3>

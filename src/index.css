@@ -153,9 +153,15 @@ header a {
 	display: flex;
 	align-items: center;
 	gap: 15px;
-	margin: 0 20px;
+	padding: 0 20px;
 	position: absolute;
-	transition: transform 0.4s ease, right 0.4s ease;
+	transition: right 0.4s ease-out;
+}
+
+.header-right,
+.header-mobile-icon {
+	right: 50%;
+	transform: translateX(50%);
 }
 
 .header-link {
@@ -198,7 +204,7 @@ header a {
 		justify-content: center;
 		align-items: center;
 		gap: 7px;
-		transition: transform 0.4s ease, right 0.4s ease;
+		transition: right 0.4s ease-out;
 	}
 
 	.header-icon-line {
@@ -462,7 +468,7 @@ header a {
 	}
 
 	.intro-text {
-		padding: 0 40px;
+		padding: 0 35px;
 	}
 
 	.intro-text h3 {
@@ -475,8 +481,9 @@ header a {
 
 	.intro-buttons {
 		margin: 35px auto 0;
-		flex-direction: column-reverse;
+		flex-wrap: wrap;
 		align-items: center;
+		justify-content: center;
 		gap: 20px;
 	}
 
@@ -496,20 +503,21 @@ header a {
 	gap: 60px;
 }
 
-.portfolio-item-wrapper {
+.project-wrapper {
 	position: relative;
 	bottom: 0;
 	min-height: calc(var(--section-max-width) / 4);
+	width: calc(var(--section-max-width) / 5);
 	text-decoration: none;
 	transition: bottom 0.4s ease;
 	text-align: center;
 }
 
-.portfolio-item-wrapper:hover {
+.project-wrapper:hover {
 	bottom: 10px;
 }
 
-.portfolio-item {
+.project {
 	height: calc(var(--section-max-width) / 4);
 	width: 100%;
 	text-decoration: none;
@@ -519,62 +527,76 @@ header a {
 	overflow: hidden;
 }
 
-.portfolio-item-content {
+.project-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	gap: 15px;
 	box-sizing: border-box;
 	padding: 15px;
 	height: 100%;
 	width: 100%;
-	opacity: 0;
 	color: white;
-	background-color: var(--secondary-color-transparent);
-	transition: opacity 0.4s ease;
+	background-color: transparent;
+	transition: background-color 0.4s ease;
 }
 
-.portfolio-item-content:hover {
+.project-content:hover {
+	background-color: var(--secondary-color-transparent);
+}
+
+.project-content:hover > .project-text {
 	opacity: 1;
 }
 
-.portfolio-item-title {
-	margin: 0;
-	font-size: 1.85rem;
-	margin-bottom: 15px;
+.project-text {
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.4s ease;
 }
 
-.portfolio-item-description {
+.project-title {
 	margin: 0;
-	font-size: 1.25rem;
+	font-size: 1.7rem;
+	line-height: 1.8rem;
+	margin-bottom: 10px;
+}
+
+.project-description {
+	margin: 0;
+	font-size: 1.1rem;
 	width: 100%;
-	max-height: 56%;
 	display: -webkit-box;
-	-webkit-line-clamp: 6;
+	-webkit-line-clamp: 5;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
 
-.portfolio-item-description.mobile {
-	display: none;
+.project-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.project-tag {
+	margin: 0;
+	padding: 5px 10px;
+	border-radius: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-	/* .portfolio-item-content {
-    display: none;
-  } */
-
-	.portfolio-item-wrapper {
+	.project-wrapper {
 		width: calc(var(--section-max-width) / 4);
 	}
+}
 
-	.portfolio-item-title.mobile {
-		display: block;
-	}
-
-	.portfolio-item-description.mobile {
-		display: -webkit-box;
-		margin-top: 20px;
-		max-height: 9.5rem;
+@media screen and (max-width: 330px) {
+	.project-wrapper {
+		width: calc(var(--section-max-width) / 5);
 	}
 }
 
@@ -585,6 +607,10 @@ header a {
 	background-color: var(--background-color);
 }
 
+#Contact > .section-content {
+	gap: 0;
+}
+
 .contact-text {
 	box-sizing: border-box;
 	text-align: center;
@@ -593,6 +619,8 @@ header a {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin: 0;
+	margin-top: 65px;
+	margin-bottom: 65px;
 	padding: 0 25px;
 }
 
@@ -610,7 +638,8 @@ header a {
 .contact-buttons {
 	display: flex;
 	align-items: center;
-	gap: 50px;
+	justify-content: center;
+	gap: 2rem;
 }
 
 .contact-buttons > a {
@@ -634,6 +663,13 @@ header a {
 	bottom: 10px;
 }
 
+@media screen and (max-width: 850px) {
+	.contact-text {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+
 @media screen and (max-width: 650px) {
 	.contact-text {
 		font-size: 1.25rem;
@@ -648,6 +684,5 @@ header a {
 		width: -webkit-fit-content;
 		width: -moz-fit-content;
 		width: fit-content;
-		margin: 0 auto;
 	}
 }

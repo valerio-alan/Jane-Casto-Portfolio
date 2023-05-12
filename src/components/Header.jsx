@@ -5,12 +5,10 @@ export default function Header(props) {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			let header = document.querySelector('header')
+			const header = document.querySelector('header')
 
 			let pos_header = window.pageYOffset + header.offsetHeight
-
 			const sectionDistances = [...props.sections].map((section) => section.element.offsetTop + section.element.offsetHeight / 1.5 - pos_header)
-
 			let min = Math.min(...sectionDistances.filter((num) => num > 0))
 
 			props.sections.forEach((section, i) => {
@@ -27,6 +25,22 @@ export default function Header(props) {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [props.sections])
+
+	useEffect(() => {
+		const headerRight = document.querySelector('.header-right')
+		const headerRightMobile = document.querySelector('.header-mobile-icon')
+
+		const rightBoundingBox = headerRight.getBoundingClientRect()
+		const rightMobileBoundingBox = headerRightMobile.getBoundingClientRect()
+
+		if (currentSection === 'Home') {
+			headerRight.style.setProperty('right', '50%')
+			headerRightMobile.style.setProperty('right', '50%')
+		} else {
+			headerRight.style.setProperty('right', `${rightBoundingBox.width / 2}px`)
+			headerRightMobile.style.setProperty('right', `${rightMobileBoundingBox.width / 2}px`)
+		}
+	}, [currentSection])
 
 	const linkEls = [...props.sections].map((section, i) => {
 		return (
@@ -49,23 +63,8 @@ export default function Header(props) {
 				>
 					<h1 className='unselectable text-logo'>Jane Casto</h1>
 				</a>
-				<div
-					className='header-right'
-					style={{
-						right: currentSection === 'Home' ? '50%' : '0',
-						transform: currentSection === 'Home' ? 'translateX(calc(50% + 20px))' : 'translateX(0)',
-					}}
-				>
-					{linkEls}
-				</div>
-				<div
-					className='header-mobile-icon mobile pointer'
-					onClick={!props.navOpen ? props.toggleNav : () => {}}
-					style={{
-						right: currentSection === 'Home' ? '50%' : '0',
-						transform: currentSection === 'Home' ? 'translateX(50%)' : 'translateX(0)',
-					}}
-				>
+				<div className='header-right'>{linkEls}</div>
+				<div className='header-mobile-icon mobile pointer' onClick={!props.navOpen ? props.toggleNav : () => {}}>
 					<div className='header-icon-line' style={{ transform: props.navOpen ? 'translateY(11.5px) rotate(45deg)' : '' }}></div>
 					<div className='header-icon-line' style={{ width: props.navOpen ? '0' : '' }}></div>
 					<div className='header-icon-line' style={{ transform: props.navOpen ? 'translateY(-11.5px) rotate(-45deg)' : '' }}></div>

@@ -3,30 +3,28 @@ import projects from '../data/projects'
 export default function Portfolio(props) {
 	// const projectWidth = 5
 
-	const projectEls = projects.map((project, i) => (
-		<a
-			className='portfolio-item-wrapper'
-			href={project.link}
-			target='_blank'
-			rel='noopener'
-			key={i}
-			style={{
-				width: `calc(var(--section-max-width) / 5)`,
-			}}
-		>
-			{/* <h3 className='portfolio-item-title mobile'>{project.title}</h3> */}
+	const projectEls = projects.data.map((project, i) => (
+		<a className='project-wrapper' href={project.link} target='_blank' rel='noopener' key={i}>
 			<div
-				className='portfolio-item popped'
+				className='project popped'
 				style={{
 					backgroundImage: `url('${project.img}')`,
 				}}
 			>
-				<div className='portfolio-item-content desktop'>
-					<h3 className='portfolio-item-title'>{project.title}</h3>
-					<p className='portfolio-item-description'>{project.description}</p>
+				<div className='project-content'>
+					<div className='project-text'>
+						<h3 className='project-title'>{project.title}</h3>
+						<p className='project-description'>{project.description}</p>
+					</div>
+					<div className='project-tags'>
+						{project.tags.map((tag, i) => (
+							<h4 key={i} className='project-tag' style={{ backgroundColor: projects.tags[tag].color, color: '#fffffff0' }}>
+								{tag}
+							</h4>
+						))}
+					</div>
 				</div>
 			</div>
-			{/* <p className='portfolio-item-description mobile'>{project.description}</p> */}
 		</a>
 	))
 
