@@ -211,12 +211,7 @@ header a {
 
   .header-link {
     width: 100%;
-    color: var(--accent-color-light);
     transition: color 0.4s ease;
-  }
-  
-  .header-link:hover {
-    color: var(--accent-color);
   }
   
   .header-link h2 {
@@ -228,7 +223,6 @@ header a {
   }
   
   .current-link {
-    background-color: var(--accent-color);
     color: white;
     border-radius: 2px;
   }
@@ -332,7 +326,6 @@ header a {
   
   .home-info h2 {
     font-size: 1.25rem;
-    color: var(--accent-color-light);
     margin: 0;
   }
 }
@@ -444,7 +437,6 @@ header a {
   }
   
   .intro-text>h3 {
-    color: var(--accent-color);
     font-size: 1.75rem;
     margin: 0;
     margin-bottom: 20px;
@@ -553,9 +545,9 @@ header a {
 }
 
 @media screen and (max-width: 1024px) {
-  .portfolio-item-content {
+  /* .portfolio-item-content {
     display: none;
-  }
+  } */
 
   .portfolio-item-wrapper {
     width: calc(var(--section-max-width) / 4);
@@ -563,12 +555,10 @@ header a {
 
   .portfolio-item-title.mobile {
     display: block;
-    color: var(--accent-color);
   }
 
   .portfolio-item-description.mobile {
     display: -webkit-box;
-    color: var(--accent-color);
     margin-top: 20px;
     max-height: 9.5rem;
   }

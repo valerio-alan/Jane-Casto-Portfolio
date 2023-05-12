@@ -8,7 +8,7 @@ export default function Portfolio(props) {
             // width: `calc(var(--section-max-width) / ${props.windowWidth >= 1024 ? projectWidth : 4})`
             width: `calc(var(--section-max-width) / 5)`
         }}>
-            <h3 className='portfolio-item-title mobile'>{project.title}</h3>
+            {/* <h3 className='portfolio-item-title mobile'>{project.title}</h3> */}
             <div className='portfolio-item popped' style={{
                 backgroundImage: `url('${project.img}')`
             }}>
@@ -17,7 +17,7 @@ export default function Portfolio(props) {
                     <p className='portfolio-item-description'>{project.description}</p>
                 </div>
             </div>
-            <p className='portfolio-item-description mobile'>{project.description}</p>
+            {/* <p className='portfolio-item-description mobile'>{project.description}</p> */}
         </a>
     ))
 
