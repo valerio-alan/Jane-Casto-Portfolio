@@ -1,9 +1,14 @@
 :root {
   --header-height: 75px;
-  --background-color: #EFE7E7;
-  --accent-color: #D29595;
-  --accent-color-transparent: #d295959d;
-  --accent-color-light: #D1AEAE;
+  --bg-color: #121212;
+  --dark-grey: #1e1e1e;
+  --dark-grey-rgb: 30, 30, 30;
+  --off-white: #e1e1e1;
+  --accent-color: #d56a86;
+  --accent-color-transparent: #d56a869d;
+  --accent-color-light: #D8A4B4;
+  --secondary-color: #5caae2;
+  --secondary-color-transparent: #5caae29d;
   --section-max-width: 1200px;
 }
 
@@ -12,7 +17,7 @@ html {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
   font-family: 'Merriweather', serif;
@@ -105,7 +110,7 @@ header {
   justify-content: center;
   padding: 0 25px;
   height: var(--header-height);
-  background-color: white;
+  background-color: var(--dark-grey);
   overflow: hidden;
 }
 
@@ -122,6 +127,11 @@ header a {
 
 .text-logo {
 	margin: 0;
+  color: var(--off-white);
+  transition: color 0.4s ease;
+}
+
+.text-logo:hover {
   color: var(--accent-color);
 }
 
@@ -135,7 +145,7 @@ header a {
 }
 
 .header-link {
-  color: var(--accent-color-light);
+  color: var(--off-white);
   transition: color 0.4s ease;
 }
 
@@ -187,7 +197,7 @@ header a {
 
   .header-mobile-nav {
     box-sizing: border-box;
-    background-color: white;
+    background-color: var(--dark-grey);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -231,7 +241,7 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #EFE7E7;
+  background-color: var(--bg-color);
   height: calc(100vh - var(--header-height));
   height: calc(100svh - var(--header-height));
   overflow: hidden;
@@ -247,7 +257,7 @@ header a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgba(var(--dark-grey-rgb), .75);
   border-radius: 5px;
   width: 520px;
   height: 220px;
@@ -260,11 +270,13 @@ header a {
 
 .home-info h1 {
   font-size: 45px;
+  color: var(--accent-color);
+  margin: 0;
 }
 
 .home-info h2 {
   font-size: 30px;
-  color: var(--accent-color-light);
+  color: var(--off-white);
   margin: 0;
 }
 
@@ -304,7 +316,6 @@ header a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
     border-radius: 5px;
     max-width: 300px;
     max-height: 125px;
@@ -329,7 +340,7 @@ header a {
 /* Intro Styling */
 
 #Intro {
-  background-color: white;
+  background-color: var(--dark-grey);
 }
 
 .intro-content{
@@ -346,7 +357,7 @@ header a {
 }
 
 .intro-text h3 {
-  color: var(--accent-color);
+  color: var(--off-white);
   font-size: 2rem;
   margin: 0;
   margin-bottom: 2rem;
@@ -354,7 +365,7 @@ header a {
 
 .intro-text p {
   max-width: 700px;
-  color: var(--accent-color-light);
+  color: var(--off-white);
   font-size: 1.5rem;
   margin: 0;
 }
@@ -512,7 +523,7 @@ header a {
   width: 100%;
   opacity: 0;
   color: white;
-  background-color: var(--accent-color-transparent);
+  background-color: var(--secondary-color-transparent);
   transition: opacity 0.4s ease;
 }
 
@@ -566,7 +577,7 @@ header a {
 /* Contact Styling */
 
 #Contact {
-  --background-color: white;
+  --background-color: var(--dark-grey);
   background-color: var(--background-color);
 }
 
@@ -574,7 +585,7 @@ header a {
   box-sizing: border-box;
   text-align: center;
   width: min(700px, 100%);
-  color: var(--accent-color);
+  color: var(--off-white);
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
@@ -582,14 +593,14 @@ header a {
 }
 
 .contact-text > a {
-  color: #975050; 
+  color: var(--accent-color); 
   text-decoration-color: var(--background-color);
   transition: text-decoration-color 0.4s ease, filter 0.4s ease;
 }
 
 .contact-text > a:hover {
-  text-decoration-color: #975050;
-  filter: drop-shadow(0 0 10px var(--accent-color-light));
+  text-decoration-color: var(--accent-color);
+  filter: drop-shadow(0 0 10px var(--bg-color));
 }
 
 .contact-buttons {

@@ -40,14 +40,18 @@ export default function ParticleBack() {
                 },
                 particles: {
                     color: {
-                        value: "#D29595",
+                        value: "#5caae2",
                     },
                     links: {
-                        color: "#D29595",
+                        color: "#5caae2",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
                         width: 1,
+                        // triangles:{
+                        //     enable: true,
+                        //     opacity:.05
+                        // }
                     },
                     // collisions: {
                     //     enable: true,
@@ -70,7 +74,7 @@ export default function ParticleBack() {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.6,
                     },
                     shape: {
                         type: "circle",
