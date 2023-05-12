@@ -6,7 +6,6 @@
   --off-white: #e1e1e1;
   --accent-color: #d56a86;
   --accent-color-transparent: #d56a869d;
-  --accent-color-light: #D8A4B4;
   --secondary-color: #5caae2;
   --secondary-color-transparent: #5caae29d;
   --section-max-width: 1200px;
@@ -21,6 +20,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Merriweather', serif;
+}
+
+::-moz-selection {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
 }
 
 *.unselectable {
