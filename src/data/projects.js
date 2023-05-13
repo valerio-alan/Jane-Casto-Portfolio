@@ -28,13 +28,6 @@ export default {
 			link: '/projects/Modern Day School Segregation_ Policy Brief.pdf',
 			tags: ['R', 'Excel/Sheets', 'Policy'],
 		},
-		{
-			title: 'Coming Soon',
-			description: 'This website is still under construction. Check back soon for more projects!',
-			img: 'https://placehold.co/512',
-			link: '',
-			tags: [],
-		},
 	],
 	tags: {
 		Tableau: { color: '#d3874c', textColor: 'dark' },

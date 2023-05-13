@@ -18,7 +18,7 @@ export default function Portfolio(props) {
 					</div>
 					<div className='project-tags'>
 						{project.tags.map((tag, i) => (
-							<h4 key={i} className='project-tag' style={{ backgroundColor: projects.tags[tag].color, color: '#fffffff0' }}>
+							<h4 key={i} className='project-tag unselectable' style={{ backgroundColor: projects.tags[tag].color, color: '#fffffff0' }}>
 								{tag}
 							</h4>
 						))}
@@ -29,7 +29,7 @@ export default function Portfolio(props) {
 	))
 
 	return (
-		<div className='section' id='Portfolio'>
+		<div className='section' id='Projects'>
 			<div className='section-content section-limiter'>
 				<h2 className='section-title popped'>Projects</h2>
 				<div className='portfolio-grid'>{projectEls}</div>
