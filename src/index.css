@@ -626,13 +626,18 @@ header a {
 
 .contact-text > a {
 	color: var(--accent-color);
-	text-decoration-color: var(--background-color);
+	-webkit-text-decoration-color: var(--background-color);
+	        text-decoration-color: var(--background-color);
+	transition: -webkit-text-decoration-color 0.4s ease, -webkit-filter 0.4s ease;
 	transition: text-decoration-color 0.4s ease, filter 0.4s ease;
+	transition: text-decoration-color 0.4s ease, filter 0.4s ease, -webkit-text-decoration-color 0.4s ease, -webkit-filter 0.4s ease;
 }
 
 .contact-text > a:hover {
-	text-decoration-color: var(--accent-color);
-	filter: drop-shadow(0 0 10px var(--bg-color));
+	-webkit-text-decoration-color: var(--accent-color);
+	        text-decoration-color: var(--accent-color);
+	-webkit-filter: drop-shadow(0 0 10px var(--bg-color));
+	        filter: drop-shadow(0 0 10px var(--bg-color));
 }
 
 .contact-buttons {
@@ -681,8 +686,7 @@ header a {
 	}
 
 	.contact-buttons > a {
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+    width: 100%;
+    text-align: center;
 	}
 }
