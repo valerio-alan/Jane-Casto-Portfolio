@@ -5,7 +5,7 @@ export default function Contact() {
 				<h2 className='section-title popped'>Contact</h2>
 				<p className='contact-text'>
 					To follow my current work, follow me on{' '}
-					<a className='linkedin-button' href='https://www.linkedin.com/in/jane-casto-b32153252/' target='_blank' rel='noopener'>
+					<a className='linkedin-button' href='https://www.linkedin.com/in/janecasto/' target='_blank' rel='noopener'>
 						LinkedIn
 					</a>{' '}
 					and{' '}
@@ -20,7 +20,7 @@ export default function Contact() {
 					</a>
 				</p>
 				<div className='contact-buttons'>
-					<a href='https://www.linkedin.com/in/jane-casto-b32153252/' target='_blank' rel='noopener'>
+					<a href='https://www.linkedin.com/in/janecasto/' target='_blank' rel='noopener'>
 						LinkedIn
 					</a>
 					<a href='https://public.tableau.com/app/profile/jane.casto' target='_blank' rel='noopener'>
