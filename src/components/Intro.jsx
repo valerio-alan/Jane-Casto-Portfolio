@@ -13,14 +13,14 @@ export default function Intro(props) {
 						I handle policy analysis, data analytics, and data science, combining the important insights of data with real-world community needs.
 						<br />
 						<br />
-						Come check out what I’ve been working on recently!
+						Come check out what I've been working on recently!
 					</p>
 					<div className='intro-buttons'>
-						<h3 className='pointer unselectable' onClick={props.sections[2] && props.sections[2].offsetFunc}>
+						<div className='pointer unselectable' onClick={props.sections[2] && props.sections[2].offsetFunc}>
 							Projects
-						</h3>
+						</div>
 						<a className='unselectable' href='/Resume.pdf' target='_blank'>
-							<h3 className='unselectable'>Resume</h3>
+							<div className='unselectable'>Resume</div>
 						</a>
 					</div>
 				</div>

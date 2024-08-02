@@ -33,7 +33,7 @@ export default function ParticleBack() {
 							quantity: 4,
 						},
 						repulse: {
-							distance: 100,
+							distance: 150,
 							duration: 0.4,
 						},
 					},
