@@ -390,6 +390,7 @@ header a {
 	width: -moz-fit-content;
 	width: fit-content;
 	gap: 2rem;
+	margin-top: 35px;
 }
 
 .intro-buttons div:hover,
@@ -398,10 +399,6 @@ header a {
 	background-color: var(--accent-color);
 	bottom: 5px;
 	transform: scale(105%);
-}
-
-.intro-buttons div {
-	margin: 35px 0 0 0;
 }
 
 .intro-buttons div,
@@ -446,7 +443,7 @@ header a {
 	}
 
 	.intro-buttons {
-		margin: 0 auto;
+		margin-inline: auto;
 	}
 }
 
@@ -486,7 +483,6 @@ header a {
 	}
 
 	.intro-buttons {
-		margin: 35px auto 0;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
