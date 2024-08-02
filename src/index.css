@@ -489,9 +489,9 @@ header a {
 		gap: 20px;
 	}
 
-	.intro-buttons h3 {
+	.intro-buttons div {
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: min(1.5rem, 6vw);
 	}
 }
 
@@ -686,7 +686,7 @@ header a {
 	}
 
 	.contact-buttons > a {
-    width: 100%;
+    width: 80%;
     text-align: center;
 	}
 }
