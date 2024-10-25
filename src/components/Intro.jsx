@@ -16,7 +16,7 @@ export default function Intro(props) {
             Come check out what I've been working on recently!
           </p>
           <div className='intro-buttons'>
-            <div className='pointer unselectable' onClick={props.sections[2] && props.sections[2].offsetFunc}>
+            <div className='pointer unselectable' onClick={props.sections[3] && props.sections[3].offsetFunc}>
               Projects
             </div>
             <a className='unselectable' href="/Jane Casto's Resume.pdf" target='_blank'>

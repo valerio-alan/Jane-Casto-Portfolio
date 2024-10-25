@@ -4,7 +4,9 @@
   --dark-grey: #1e1e1e;
   --dark-grey-rgb: 30, 30, 30;
   --off-white: #cecece;
+  --off-white-empty: #cecece00;
   --accent-color: #d56a86;
+  --accent-color-empty: #d56a8600;
   --accent-color-transparent: #d56a87c1;
   --secondary-color: #5caae2;
   --secondary-color-transparent: #5caae2b5;
@@ -503,6 +505,10 @@ header a {
 
 /* Portfolio Styling */
 
+#Projects {
+  background-color: var(--dark-grey);
+}
+
 .portfolio-grid {
   max-width: 80%;
   display: flex;
@@ -623,12 +629,285 @@ header a {
   }
 }
 
-/* Contact Styling */
+/* Education Styling */
 
-#Contact {
-  --background-color: var(--dark-grey);
-  background-color: var(--background-color);
+#Education {
+  overflow: hidden;
 }
+
+.timeline {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+}
+
+/* .timeline:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.5px);
+  left: -50%;
+  background-color: var(--off-white);
+  height: 3px;
+  width: 200%;
+} */
+
+.timeline:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1.5px);
+  background: linear-gradient(90deg, var(--accent-color-empty) 0%, var(--accent-color) 20%, var(--accent-color) 80%, var(--off-white) 80%, var(--off-white-empty) 100%);
+  height: 3px;
+  width: 120%;
+}
+
+.cert-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 21%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--off-white);
+  z-index: 1;
+  transform: scale(1);
+  transition: opacity 0.5s linear, transform 0.4s ease;
+}
+
+/* .cert-wrapper.in-progress {
+  opacity: 0.5;
+} */
+
+.timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) {
+  transform: scale(0.95);
+}
+
+.timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover):after {
+  height: 25px;
+  width: 25px;
+}
+
+.timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) > .cert-img,
+.timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) > .cert-info {
+  opacity: 0.5;
+}
+
+.cert-img {
+  position: relative;
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 50px;
+  bottom: 0;
+  transition: bottom 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+.cert-wrapper:hover > .cert-img {
+  bottom: 5px;
+  transform: scale(105%);
+}
+
+.cert-wrapper:after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--accent-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 6px solid var(--bg-color);
+  outline: 3px solid var(--accent-color);
+  outline-offset: -3px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: height 0.4s ease, width 0.4s ease;
+}
+
+.cert-wrapper.in-progress:after {
+  background-color: var(--bg-color);
+}
+
+.cert-wrapper:hover:after {
+  height: 35px;
+  width: 35px;
+}
+
+.cert-info {
+  position: relative;
+  margin-top: 50px;
+  top: 0;
+  transition: top 0.75s ease, opacity 0.4s ease, transform 0.75s ease;
+}
+
+.cert-wrapper:hover > .cert-info {
+  top: 5px;
+  transform: scale(105%);
+}
+
+.cert-info p {
+  margin: 0;
+  opacity: 80%;
+}
+
+.cert-title {
+  margin-block: 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .timeline:after {
+    content: none;
+    top: 47.5%;
+    left: 5%;
+    transform: translate(0, -50%);
+    background: linear-gradient(var(--accent-color-empty) 0%, var(--accent-color) 20%, var(--accent-color) 80%, var(--off-white) 80%, var(--off-white-empty) 100%);
+    height: 120%;
+    width: 3px;
+  }
+
+  .timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) {
+    transform: scale(1);
+  }
+
+  .timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover):after {
+    height: 25px;
+    width: 25px;
+  }
+
+  .timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) > .cert-img,
+  .timeline:has(.cert-wrapper:hover) > .cert-wrapper:not(:hover) > .cert-info {
+    opacity: 0.5;
+  }
+
+  .cert-wrapper {
+    padding-left: 12.5%;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-start;
+  }
+
+  .cert-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 47px;
+    left: 5%;
+    background: var(--accent-color);
+    height: calc(100% + 50px);
+    width: 3px;
+  }
+
+  .cert-wrapper:first-child:before {
+    background: linear-gradient(var(--accent-color-empty) 0%, var(--accent-color) 40%, var(--accent-color));
+    height: calc(100% + 175px);
+    transform: translateY(-125px);
+  }
+
+  .cert-wrapper.in-progress:before {
+    background: linear-gradient(var(--off-white), var(--off-white-empty));
+    height: 80%;
+  }
+
+  .cert-wrapper:after {
+    top: 37.5px;
+    left: 5.25%;
+    height: 25px;
+    width: 25px;
+  }
+
+  .cert-wrapper:hover:after {
+    height: 30px;
+    width: 30px;
+  }
+
+  .cert-img {
+    position: relative;
+    border-radius: 5px;
+    height: 75px;
+    width: 75px;
+    margin-bottom: 0;
+    bottom: 0;
+    transition: bottom 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .cert-wrapper:hover > .cert-img {
+    bottom: 0;
+    transform: scale(105%);
+  }
+
+  .cert-info {
+    top: -2px;
+    left: 0;
+    margin-top: 0;
+    transition: left 0.75s ease, opacity 0.4s ease, transform 0.75s ease;
+  }
+
+  .cert-wrapper:hover > .cert-info {
+    top: 0;
+    left: 5px;
+    transform: scale(105%);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .timeline:after {
+    left: 7.5%;
+  }
+
+  .cert-wrapper {
+    padding-left: 16%;
+    padding-right: 5%;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .cert-wrapper:before {
+    left: 7.5%;
+  }
+
+  .cert-wrapper:after {
+    top: 37.5px;
+    left: 8%;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+  }
+
+  .cert-wrapper:hover:after {
+    height: 29px;
+    width: 29px;
+  }
+
+  .cert-wrapper:hover > .cert-img {
+    transform: scale(103%);
+  }
+
+  .cert-wrapper:hover > .cert-info {
+    left: 3px;
+    transform: scale(103%);
+  }
+}
+
+/* Contact Styling */
 
 #Contact > .section-content {
   gap: 0;
