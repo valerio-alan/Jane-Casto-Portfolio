@@ -3,7 +3,7 @@ export default [
     title: 'Budget Report Example',
     description: 'Demonstration of budgeting tables, charts, and visuals.',
     img: 'project_images/Budget Report.png',
-    link: '/projects/Budget Report Example | Jane Casto.pdf',
+    link: '/projects/Budget Report Example_Jane Casto.pdf',
     tags: ['Budget', 'Excel/Sheets'],
   },
   {
