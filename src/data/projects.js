@@ -1,5 +1,12 @@
 export default [
   {
+    title: 'SF Film Dashboard',
+    description: 'Power BI Dashboard demonstration for talks I\'ve given across California.',
+    img: 'project_images/SF Film Dashboard.png',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiNWZlOGVhM2EtZTQ0Zi00Mzg2LTg0MTktNTk2NWNkZjdjNWY4IiwidCI6IjQwODg2NTg4LWM5OWYtNDY4NS1iNGQ5LTY3MWM1OTdkNDU2MyIsImMiOjZ9',
+    tags: ['Power BI', 'Dashboard', 'Excel/Sheets'],
+  },
+  {
     title: 'BSCC Report',
     description: 'Public annual budget and data report for Marin County.',
     img: 'project_images/BSCC Report.png',
