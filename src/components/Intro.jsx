@@ -1,4 +1,4 @@
-import janePFP from '../assets/jane.jpg';
+import janePFP from '../assets/jane.png';
 
 export default function Intro(props) {
   return (
