@@ -8,5 +8,5 @@ export default {
   Healthcare: { color: '#e4786d', textColor: 'dark' },
   Budget: { color: '#52b997', textColor: 'dark' },
   Dashboard: { color: '#dea012', textColor: 'light' },
-  'Power BI': { color: '#f2c80f', textColor: 'dark' },
+  'Power BI': { color: '#e0b90c', textColor: 'dark' },
 };
