@@ -1,5 +1,12 @@
 export default [
   {
+    title: 'BSCC Report',
+    description: 'Public annual budget and data report for Marin County.',
+    img: 'project_images/BSCC Report.png',
+    link: 'https://www.bscc.ca.gov/wp-content/uploads/2025/09/Marin-Updated-CCP-Annual-Plan-24-25.pdf',
+    tags: ['Policy', 'Budget', 'Excel/Sheets'],
+  },
+  {
     title: 'Budget Report Example',
     description: 'Demonstration of budgeting tables, charts, and visuals.',
     img: 'project_images/Budget Report.png',
