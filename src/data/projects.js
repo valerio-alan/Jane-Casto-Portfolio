@@ -25,7 +25,7 @@ export default [
     description: 'Analyzing a strange relationship between infection and mortality rates in Northern California.',
     img: 'project_images/Covid-19 in California.png',
     link: 'https://public.tableau.com/app/profile/jane.casto/viz/Covid-19DatainCalifornia/Dashboard1',
-    tags: ['Tableau', 'Excel/Sheets'],
+    tags: ['Tableau', 'Dashboard', 'Excel/Sheets'],
   },
   {
     title: 'R Visualizations',
